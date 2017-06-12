@@ -32,6 +32,17 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-100583868-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
 </head>
 
 <body id="page-top">
@@ -40,9 +51,9 @@
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <!--    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> <i class="fa fa-bars"></i>
-                </button>
+                </button> -->
                <a class="navbar-brand page-scroll" href="#page-top">Podium</a>
               <!--   <img src="./img/logo_white.png" class="navbar-brand page-scroll" href="#page-top"></img> -->
             </div>
@@ -78,7 +89,7 @@
                 <hr>
 
                 <h1 id="homeHeading">Não deixe o medo de falar em público ser um obstáculo na sua vida.</h1>
-                <a href="#services" class="btn btn-primary btn-xl page-scroll">Saiba mais</a>
+                <a href="#services" class="btn btn-primary btn-xl page-scroll" onClick="ga('send', 'event', 'registro', 'click', 'saiba mais');">Saiba mais</a>
             </div>
         </div>
     </header>
@@ -116,26 +127,21 @@
                         <p class="text-muted">Gráficos que oferecem uma visão geral do seu desempenho baseado nas avaliações dos exercícios.</p>
                     </div>
                 </div>
-              <!--  <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-heart text-primary sr-icons"></i>
-                        <h3>Made with Love</h3>
-                        <p class="text-muted">You have to make your websites with love these days!</p>
-                    </div>
-                </div> -->
+
+            </div>
+            <div class="row">
+              <div class="col-lg-12 text-center">
+                <hr class="light">
+                <a href="contact.html" class="page-scroll btn btn-default btn-xl sr-button btn-primary" onClick="ga('send', 'event', 'registro', 'click', 'descubra');">Inscreva-se</a>
+            </div>
+              </div>
             </div>
         </div>
     </section>
 
-    <section class="bg-primary" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Acompanhe as novidades</h2>
-                    <hr class="light">
-                    <a href="contact.html" class="page-scroll btn btn-default btn-xl sr-button">Descubra</a>
-                </div>
-            </div>
+    <section class="bg-green">
+        <div>
+          <p>Copyright Podium-App 2017</p>
         </div>
     </section>
 
