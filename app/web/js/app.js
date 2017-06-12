@@ -15,20 +15,25 @@
 
     userEmail.registerEmail = function () {
 
-      var promise = RegisterEmailService.addEmail(userEmail.email);
+      if (userEmail.email != undefined && userEmail.email != "") {
 
-      promise.then(function (response) {
-      var data = response.data;
+        var promise = RegisterEmailService.addEmail(userEmail.email);
 
-      var msg = data["description"];
-      console.log(msg);
-      alert(msg);
+        promise.then(function (response) {
 
-      })
-      .catch(function (error) {
-        console.log("erro" + error);
-      })
+        var data = response.data;
 
+        var msg = data["description"];
+        console.log(msg);
+        alert(msg);
+
+        })
+        .catch(function (error) {
+          console.log("erro" + error);
+        })
+      } else {
+        alert("Digite seu e-mail");
+      }
     };
   }
 
@@ -38,7 +43,9 @@
     var service = this;
 
     service.addEmail = function (email) {
+
       console.log("email:" + email);
+
       if(email != undefined){
 
         var response = $http({
@@ -50,12 +57,7 @@
         });
 
         return response;
-
       }
-      else{
-        
-      }
-
     };
   }
 
