@@ -5,7 +5,7 @@
   angular.module('PodiumApp',[])
   .controller('EmailController', EmailController)
   .service('RegisterEmailService', RegisterEmailService)
-  .constant('ApiBasePath', "http://54.207.40.40:5010/email");
+  .constant('ApiBasePath', "https://54.207.40.40:5010/email");
 
   EmailController.$inject = ['RegisterEmailService'];
 
