@@ -22,6 +22,7 @@
 
       var msg = data["description"];
       console.log(msg);
+      alert(msg);
 
       })
       .catch(function (error) {
@@ -52,7 +53,7 @@
 
       }
       else{
-        console.log("Digite email");
+        
       }
 
     };
