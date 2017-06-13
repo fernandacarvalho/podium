@@ -16,23 +16,31 @@
     userEmail.registerEmail = function () {
 
       if (userEmail.email != undefined && userEmail.email != "") {
+        var isValid = validateEmail(userEmail.email);
 
-        var promise = RegisterEmailService.addEmail(userEmail.email);
+        if(isValid == true)
+        {
+          var promise = RegisterEmailService.addEmail(userEmail.email);
 
-        promise.then(function (response) {
+          promise.then(function (response) {
 
-        var data = response.data;
+          var data = response.data;
 
-        var msg = data["description"];
-        console.log(msg);
-        alert(msg);
+          var msg = data["description"];
+          console.log(msg);
+          alert(msg);
 
-        })
-        .catch(function (error) {
-          console.log("erro" + error);
-        })
+          })
+          .catch(function (error) {
+            console.log("erro" + error);
+          })
+        }
+        else {
+          alert("Por favor, digite um e-mail válido.");
+        }
+
       } else {
-        alert("Digite seu e-mail");
+        alert("Digite seu e-mail.");
       }
     };
   }
@@ -61,6 +69,10 @@
     };
   }
 
+  function validateEmail(email) {
+    var re = /^[a-z][a-zA-Z0-9_.]*(\.[a-zA-Z][a-zA-Z0-9_.]*)?@[a-z][a-zA-Z-0-9]*\.[a-z]+(\.[a-z]+)?$/;
+    return re.test(email);
+}
 
 
 })();
